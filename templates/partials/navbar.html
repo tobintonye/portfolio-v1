@@ -1,0 +1,18 @@
+{% load static %}
+<nav class="navbar" id="navbar">
+    <div class="logo">
+        <img src="{% static 'images/teelogo.jpeg' %}" alt="Tonye Tobin Logo" onerror="this.style.display='none'">
+        <span>Tonye Tobin</span>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="{% url 'home' %}#work">Work</a>
+        <a href="{% url 'home' %}#stack">Stack</a>
+        <a href="{% url 'home' %}#about">About</a>
+        <a href="{% url 'home' %}#contact" class="btn-nav">Contact</a>
+    </div>
+</nav>

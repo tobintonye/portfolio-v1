@@ -1,0 +1,128 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Tonye Tobin | Software Engineer{% endblock %}
+{% block content %}
+
+    <header class="hero">
+        <div class="hero-bg-overlay">
+        <div class="trace-line t1"></div>
+        <div class="trace-line t2"></div>
+        <div class="trace-line vertical t3"></div>
+        <div class="trace-line vertical t4"></div>
+    </div>
+        <div class="hero-content">
+             <div class="hero-logo-section">
+                <img src="{% static 'images/teelogo.jpeg' %}" alt="Tonye Tobin Logo">
+                <div class="hero-name">Tonye Tobin</div>
+            </div>
+            <div class="label">Software Engineer / Backend Specialist</div>
+            <h1>Building scalable<br>systems that matter.</h1>
+            <p class="hero-sub">Passionate about creating elegant solutions to complex problems through clean code and thoughtful architecture.</p>
+            
+            <div class="cta-group">
+                <a href="#work" class="btn btn-primary">View My Work</a>
+                  <a href="{% static 'documents/TonyeTobinResume.pdf' %}" download="TonyeTobinResume.pdf" class="btn btn-secondary">
+                <i class="fa-solid fa-file-pdf"></i> Download Resume
+            </a>
+                <a href="https://github.com/tobintonye" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+        </div>
+       
+    </header>
+
+    <section id="stack" class="stack-section">
+        <div class="container">
+            <h2 class="section-title">Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">Java</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Spring Boot</div>
+                <div class="tech-item">Django</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">MySQL</div>
+                <div class="tech-item">HTMX</div>
+                <div class="tech-item">Git</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="project-type">Web Application</span>
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Appointment Scheduling App</h3>
+                    <p>A full-stack appointment scheduling application designed to help users book, view, and manage appointments with service providers. It includes user authentication, role support (clients & providers), and dynamic scheduling features.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>MySQL</span>
+                        <span>HTML, CSS, HTMX</span>
+                    </div>
+                    <a href="https://github.com/tobintonye/echoslot" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>  <a href="https://echoslot.hillcityfoundation.org/" class="project-link">Live <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="project-type">API Development</span>
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3>E-Commerce Api</h3>
+                    <p>A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>MySQL</span>
+                        <span>PayStack</span>
+                    </div>
+                    <a href="https://github.com/tobintonye/estore" class="project-link">View Documentation <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="project-type">Real-Time App</span>
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3>Anonymous Support Platform</h3>
+                    <p>A web-based anonymous support and messaging platform built to demonstrate privacy-focused communication between users and service providers</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>MySQL</span>
+                        <span>HTML, CSS, JavaScript</span>
+                    </div>
+                    <a href="https://github.com/tobintonye/Anonymous-Therapy-app" class="project-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container split-layout">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm a software engineer who loves turning ideas into reality through code. With a focus on backend development and system architecture, I build solutions that are not just functional, but scalable and maintainable. When I'm not coding, you'll find me exploring new technologies or contributing to open-source projects.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-num">2+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">3+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <script src="{% static 'portfolio.js' %}"></script>
+{% endblock %}
