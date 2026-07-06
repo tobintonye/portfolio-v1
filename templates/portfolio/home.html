@@ -1,0 +1,170 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Tonye Tobin | Backend Engineer{% endblock %}
+{% block content %}
+
+    <section id="abstract" class="abstract-section">
+        <div class="hero-bg-overlay">
+            <div class="trace-line t1"></div>
+            <div class="trace-line t2"></div>
+            <div class="trace-line vertical t3"></div>
+            <div class="trace-line vertical t4"></div>
+        </div>
+        <div class="container">
+            <span class="eyebrow">&sect;1 &mdash; Abstract</span>
+            <h1>Building Software systems that <span class="accent-word">solve</span> real problems.</h1>
+            <p class="hero-sub">I'm a Software engineer working primarily in Python/Django and Java/Spring Boot &mdash; designing the APIs, auth systems, and data models underneath a product, not just the screens on top of it.</p>
+
+            <div class="cta-group">
+                <a href="#work" class="btn btn-primary">&sect; View Implementations</a>
+                <a href="{% static 'documents/Tonye_Tobin__Backend_Resume 2.pdf' %}" download="Tonye_Tobin__Backend_Resume 2.pdf" class="btn btn-secondary">
+                    <i class="fa-solid fa-file-pdf"></i> Download Resume
+                </a>
+                <a href="https://github.com/tobintonye" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="stack-section">
+        <div class="container">
+            <span class="eyebrow">&sect;2 &mdash; Technology Stack</span>
+            <h2 class="section-title">Primary Stack &amp; Tooling</h2>
+            <p class="section-intro">Technologies used across the implementations described in &sect;3.</p>
+            <div class="tech-grid">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Django</span>
+                <span class="tech-item">Java</span>
+                <span class="tech-item">Spring Boot</span>
+                <span class="tech-item">PostgreSQL</span>
+                <span class="tech-item">MySQL</span>
+                <span class="tech-item">HTMX</span>
+                <span class="tech-item">Git</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-section">
+        <div class="container">
+            <span class="eyebrow">&sect;3 &mdash; Implementations</span>
+            <h2 class="section-title">Selected Implementations</h2>
+            <p class="section-intro">Four implementations selected from ongoing work. Each links to a full write-up covering architecture and the specific engineering decisions behind it.</p>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="clause-num">&sect;3.1</span>
+                        <span class="project-type">Web Application</span>
+                    </div>
+                    <h3>Appointment Scheduling App</h3>
+                    <p>A full-stack appointment scheduling application designed to help users book, view, and manage appointments with service providers. It includes user authentication, role support (clients & providers), and dynamic scheduling features.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>MySQL</span>
+                        <span>HTML, CSS, HTMX</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'project_detail' 'echoslot' %}" class="project-link">Read Implementation Notes <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://github.com/tobintonye/echoslot" target="_blank" class="card-github-link" aria-label="View on GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                <div class="card-header">
+                    <span class="clause-num">&sect;3.2</span>
+                    <span class="project-type">Security & Auth</span>
+                </div>
+                <h3>Vaultapp - Authentication System</h3>
+                <p>Production-ready authentication and authorization API with OAuth2 integration, JWT tokens, and refresh token rotation. Features Google login, account linking, failed login tracking, and comprehensive security measures for modern applications.</p>
+                <div class="tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>OAuth2</span>
+                    <span>JWT</span>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'project_detail' 'vaultapp' %}" class="project-link">Read Implementation Notes <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://github.com/tobintonye/Vaultapp" target="_blank" class="card-github-link" aria-label="View on GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </article>
+
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="clause-num">&sect;3.3</span>
+                        <span class="project-type">API Development</span>
+                    </div>
+                    <h3>E-Commerce Api</h3>
+                    <p>A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>MySQL</span>
+                        <span>PayStack</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'project_detail' 'estore' %}" class="project-link">Read Implementation Notes <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://github.com/tobintonye/estore" target="_blank" class="card-github-link" aria-label="View on GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="clause-num">&sect;3.4</span>
+                        <span class="project-type">Real-Time App</span>
+                    </div>
+                    <h3>Anonymous Support Platform</h3>
+                    <p>A web-based anonymous support and messaging platform built to demonstrate privacy-focused communication between users and service providers</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>MySQL</span>
+                        <span>HTML, CSS, JavaScript</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'project_detail' 'easetalk' %}" class="project-link">Read Implementation Notes <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://github.com/tobintonye/Anonymous-Therapy-app" target="_blank" class="card-github-link" aria-label="View on GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container split-layout">
+            <div class="about-text">
+                <span class="eyebrow">&sect;4 &mdash; About the Author</span>
+                <h2>About Me</h2>
+                <div class="author-byline">
+                    <button type="button" class="author-photo-btn" id="authorPhotoBtn" aria-label="View larger photo of Tonye Tobin">
+                        <img src="{% static 'images/profile.jpeg' %}" alt="Tonye Tobin" class="author-photo">
+                        <span class="author-photo-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    </button>
+                    <div>
+                        <div class="author-name">Tonye Tobin</div>
+                        <div class="author-role">Backend Engineer &middot; Port Harcourt, NG</div>
+                    </div>
+                </div>
+                <p>I'm a self-taught software engineer who focuses on backend development and system architecture &mdash; APIs, authentication, payments, and the data models that hold a product together. When I'm not building, you'll find me reading up on system design or contributing to open-source projects.</p>
+            </div>
+            <div class="stats-table">
+                <div class="stat-box">
+                    <span class="stat-label">Years Experience</span>
+                    <span class="stat-num">3+</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Projects Shipped</span>
+                    <span class="stat-num">4+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="photo-lightbox" id="photoLightbox">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close photo">&times;</button>
+    <img src="{% static 'images/profile.jpeg' %}" alt="Tonye Tobin" class="lightbox-img">
+</div>
+
+   <script src="{% static 'portfolio.js' %}"></script>
+{% endblock %}

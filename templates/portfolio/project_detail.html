@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ project.title }} — {{ project.subtitle }} | Tonye Tobin{% endblock %}
+{% block content %}
+
+    <header class="project-hero">
+        <div class="container">
+            <a href="{% url 'home' %}#work" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to &sect;3 Implementations</a>
+
+            <span class="project-type detail-type"><i class="{{ project.type_icon }}"></i> {{ project.type }}</span>
+            <h1 class="detail-title">{{ project.title }}</h1>
+            <p class="detail-subtitle">{{ project.subtitle }}</p>
+            <p class="hero-sub detail-tagline">{{ project.tagline }}</p>
+
+            <div class="tags">
+                {% for t in project.tech_stack %}<span>{{ t }}</span>{% endfor %}
+            </div>
+
+            <div class="cta-group detail-cta">
+                <a href="{{ project.github }}" target="_blank" class="btn btn-primary">
+                    <i class="fa-brands fa-github"></i> &sect; View Source on GitHub
+                </a>
+                {% if project.live %}
+                <a href="{{ project.live }}" target="_blank" class="btn btn-secondary">
+                    &sect; Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                {% endif %}
+            </div>
+
+            {% if project.live_note %}
+            <p class="live-note"><i class="fa-solid fa-circle-info"></i> {{ project.live_note }}</p>
+            {% endif %}
+        </div>
+    </header>
+
+    <section class="detail-section">
+        <div class="container">
+            <span class="eyebrow">Appendix &mdash; Overview</span>
+            <h2 class="section-title visible">Overview</h2>
+            <p class="detail-text">{{ project.overview }}</p>
+        </div>
+    </section>
+
+    <section class="detail-section alt-bg">
+        <div class="container">
+            <span class="eyebrow">Appendix &mdash; System Architecture</span>
+            <h2 class="section-title visible">System Architecture</h2>
+            <p class="detail-text">{{ project.architecture_summary }}</p>
+
+            {% for diagram in project.diagrams %}
+            <div class="arch-block">
+                <h3 class="arch-title">{{ diagram.title }}</h3>
+                <div class="arch-diagram">
+                    {% for node in diagram.nodes %}
+                        <div class="arch-node">
+                            <i class="{{ node.icon }}"></i>
+                            <span>{{ node.label }}</span>
+                        </div>
+                        {% if not forloop.last %}
+                        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="detail-section">
+        <div class="container">
+            <span class="eyebrow">Appendix &mdash; Technical Highlights</span>
+            <h2 class="section-title visible">Technical Highlights</h2>
+            <ul class="highlight-list">
+                {% for h in project.highlights %}
+                <li><i class="fa-solid fa-circle-check"></i><span>{{ h }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <section class="detail-section alt-bg">
+        <div class="container">
+            <span class="eyebrow">Appendix &mdash; Stack Breakdown</span>
+            <h2 class="section-title visible">Tech Stack Breakdown</h2>
+            <div class="stack-breakdown">
+                {% for layer, techs in project.stack_layers.items %}
+                <div class="stack-row">
+                    <span class="stack-layer-label">{{ layer }}</span>
+                    <span class="stack-layer-value">{{ techs }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-final-cta">
+        <div class="container">
+            <h2>Want to see the code?</h2>
+            <p>Full source, commit history, and setup instructions are on GitHub.</p>
+            <div class="cta-group">
+                <a href="{{ project.github }}" target="_blank" class="btn btn-primary">
+                    <i class="fa-brands fa-github"></i> &sect; Explore the Repository
+                </a>
+                <a href="{% url 'home' %}#work" class="btn btn-outline">&larr; Back to &sect;3</a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

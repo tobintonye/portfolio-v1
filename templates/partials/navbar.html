@@ -1,0 +1,42 @@
+{% load static %}
+<div class="doc-meta">
+    <div class="doc-meta-inner">
+        <div class="doc-meta-left">
+            <span class="doc-id">RFC-0001</span>
+            <span class="doc-sep">/</span>
+            <span class="doc-name">Tonye Tobin</span>
+        </div>
+        <div class="doc-meta-right">
+            <span class="status-chip"><span class="status-dot"></span><span class="status-label">Available for hire</span></span>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tobintonye143@gmail.com" class="doc-email" target="_blank">
+                <i class="fa-solid fa-envelope"></i> <span class="doc-email-text">tobintonye143@gmail.com</span>
+            </a>
+            <div class="doc-socials">
+                <a href="https://www.linkedin.com/in/tonye-tobin/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/tobintonye" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/tee_tobin" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar" id="navbar">
+    <div class="logo">
+        <img src="{% static 'images/teelogo.jpeg' %}" alt="Tonye Tobin Logo" onerror="this.style.display='none'">
+        <span class="toc-label">Contents</span>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="{% url 'home' %}#abstract"><span class="toc-num">1.</span> Abstract</a>
+        <a href="{% url 'home' %}#stack"><span class="toc-num">2.</span> Stack</a>
+        <a href="{% url 'home' %}#work"><span class="toc-num">3.</span> Implementations</a>
+        <a href="{% url 'home' %}#about"><span class="toc-num">4.</span> About</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tobintonye143@gmail.com" target="_blank" class="btn-nav mobile-email">
+            <i class="fa-solid fa-envelope"></i> tobintonye143@gmail.com
+        </a>
+        <a href="{% url 'home' %}#contact" class="btn-nav">5 Contact</a>
+    </div>
+</nav>

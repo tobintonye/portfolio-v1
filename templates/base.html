@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tonye Tobin | Software Engineer{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+     <footer id="contact">
+        <div class="container footer-content">
+            <span class="eyebrow">5 — References</span>
+            <h2>Let's work together.</h2>
+            <p>I'm currently available for freelance projects and full-time backend/full-stack roles, remote-friendly from Lagos, NG.</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tobintonye143@gmail.com" class="email-link">tobintonye143@gmail.com</a>
+
+            <ul class="reference-list">
+                <li><span class="ref-index">[1]</span> <a href="https://www.linkedin.com/in/tonye-tobin/" target="_blank">LinkedIn — linkedin.com/in/tonye-tobin</a></li>
+                <li><span class="ref-index">[2]</span> <a href="https://github.com/tobintonye" target="_blank">GitHub — github.com/tobintonye</a></li>
+                <li><span class="ref-index">[3]</span> <a href="https://x.com/tee_tobin" target="_blank">X — @tee_tobin</a></li>
+            </ul>
+            <div class="copyright">
+                RFC-0001 &middot; Tonye Tobin &middot; © 2026. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
